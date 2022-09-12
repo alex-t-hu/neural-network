@@ -319,7 +319,7 @@ public class ABCDBackpropagationModular
       long duration = endTime - startTime;
       double durationInSeconds = (double) duration / ONE_BILLION;
       
-      BufferedWriter fileWriter = new BufferedWriter(new FileWriter(new File("src/" + fileName)));
+      BufferedWriter fileWriter = new BufferedWriter(new FileWriter(new File("output/" + fileName)));
       String fileNameWeights = "weights_" + fileName;
       
       writeWeightsToFile(fileNameWeights);
@@ -426,7 +426,7 @@ public class ABCDBackpropagationModular
    public static double[][][] readWeightsFromFile(String fileNameWeights, int numLayers, 
                                                   int[] numActivations) throws Exception
    {
-      BufferedReader fileReader = new BufferedReader(new FileReader(new File("src/" + fileNameWeights)));
+      BufferedReader fileReader = new BufferedReader(new FileReader(new File("weights/" + fileNameWeights)));
       
       //skips the starting lines
       for (int i = 0; i < numLayers + OFFSET_READINGWEIGHTS; i++)
@@ -464,7 +464,7 @@ public class ABCDBackpropagationModular
     */
    public static void printFileToConsole(String fileName) throws Exception
    {
-      BufferedReader fileReader = new BufferedReader(new FileReader("src/" + fileName));
+      BufferedReader fileReader = new BufferedReader(new FileReader(fileName));
       
       String line;
       
@@ -485,9 +485,9 @@ public class ABCDBackpropagationModular
    {
       ABCDBackpropagationModular perceptron;
       
-      printFileToConsole(inputFileName);
+      printFileToConsole("input/" + inputFileName);
       
-      BufferedReader fileReader = new BufferedReader(new FileReader("src/" + inputFileName));
+      BufferedReader fileReader = new BufferedReader(new FileReader("input/" + inputFileName));
       boolean isTraining = fileReader.readLine().equals("Training");
       int numLayers = Integer.parseInt(extractLast(fileReader.readLine()));
       int[] numActivations = new int[numLayers];
@@ -527,7 +527,7 @@ public class ABCDBackpropagationModular
                                                         lambda, isRandomlyInitialized);
             
             System.out.println();
-            printFileToConsole(fileNameWeights);
+            printFileToConsole("weights/" + fileNameWeights);
          } // else
          
          fileReader.readLine();
@@ -569,7 +569,7 @@ public class ABCDBackpropagationModular
          String fileNameWeights = extractLast(fileReader.readLine());
          
          System.out.println();
-         printFileToConsole(fileNameWeights);
+         printFileToConsole("weights/" + fileNameWeights);
          
          double[][][] w = readWeightsFromFile(fileNameWeights, numLayers, numActivations);
          double[] inputs = new double[numActivations[0]];
@@ -602,7 +602,7 @@ public class ABCDBackpropagationModular
     */
    public void writeWeightsToFile(String fileNameWeights) throws Exception
    {
-      BufferedWriter fileWriter = new BufferedWriter(new FileWriter(new File("src/" + fileNameWeights)));
+      BufferedWriter fileWriter = new BufferedWriter(new FileWriter(new File("weights/" + fileNameWeights)));
       
       fileWriter.write("Weights");
       fileWriter.newLine();
@@ -641,7 +641,7 @@ public class ABCDBackpropagationModular
    {
       run(inputs);
       
-      BufferedWriter fileWriter = new BufferedWriter(new FileWriter(new File("src/" + fileName)));
+      BufferedWriter fileWriter = new BufferedWriter(new FileWriter(new File("output/" + fileName)));
       
       saveNetworkInfo(fileWriter);
       

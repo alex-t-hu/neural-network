@@ -1,4 +1,4 @@
-Training
+hTraining
 Num layers = 3
 Num activations in layer 0 = 2
 Num activations in layer 1 = 5

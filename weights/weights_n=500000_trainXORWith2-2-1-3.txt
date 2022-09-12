@@ -1,0 +1,15 @@
+Weights
+Num layers = 4
+Num activations in layer 0 = 2
+Num activations in layer 1 = 2
+Num activations in layer 2 = 1
+Num activations in layer 3 = 3
+
+Weights for n = 0
+0.52122103298378 8.322070612206526 
+0.5211891357415267 8.319766653254021 
+Weights for n = 1
+-55.2490851147662 
+37.500050476049346 
+Weights for n = 2
+-3.110724965992268 55.25801522464173 3.106361126603516 

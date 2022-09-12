@@ -1,0 +1,35 @@
+Training
+Time took = 5.389983583 seconds
+fileNameFinalWeights = weights_outputOftrainXORWith2-2-1-3.txt
+lambda = 0.1
+
+Total error, 0.6597796704930727 , greater than 0.01
+Maximum iterations, 1000000 , reached
+
+Input test case 0
+0.0 0.0 
+Outputs
+0.4999437971807808 0.5013192437882461 0.5000561562653616 
+True value (T)
+0.0 0.0 0.0 
+
+Input test case 1
+0.0 1.0 
+Outputs
+0.0444481337762611 1.0 0.9554438077691804 
+True value (T)
+0.0 1.0 1.0 
+
+Input test case 2
+1.0 0.0 
+Outputs
+0.04444919474589625 1.0 0.9554427452213499 
+True value (T)
+0.0 1.0 1.0 
+
+Input test case 3
+1.0 1.0 
+Outputs
+0.47342835714958476 0.9239462586778985 0.5265496744683796 
+True value (T)
+1.0 1.0 0.0 

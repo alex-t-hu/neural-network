@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AB1Perceptron",
+            "request": "launch",
+            "mainClass": "AB1Perceptron",
+            "projectName": "ATCS-Neural-Networks_33356f77"
+        },
+        {
+            "type": "java",
+            "name": "Launch ABCBackpropagation",
+            "request": "launch",
+            "mainClass": "ABCBackpropagation",
+            "projectName": "ATCS-Neural-Networks_33356f77"
+        },
+        {
+            "type": "java",
+            "name": "Launch ABCDBackpropagation",
+            "request": "launch",
+            "mainClass": "ABCDBackpropagation",
+            "projectName": "ATCS-Neural-Networks_33356f77"
+        },
+        {
+            "type": "java",
+            "name": "Launch ABCDBackpropagationModular",
+            "request": "launch",
+            "mainClass": "ABCDBackpropagationModular",
+            "projectName": "ATCS-Neural-Networks_33356f77",
+            // "args": "trainXORWith2-2-1-3.txt"
+            "args": "trainXORWith2-2-3-3.txt"
+        }
+    ]
+}
