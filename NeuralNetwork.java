@@ -11,7 +11,7 @@ import java.lang.String;
  * The weights can easily be saved in separate files and used for training or running later.
  * Uses files and standard console for easy user interface.
  */
-public class ABCDBackpropagationModular
+public class NeuralNetwork
 {
    static final double ONE_BILLION = 1000000000.0;
    static final int OFFSET_THETA = 1;                 //Theta's first element corresponds to the 2nd layer
@@ -41,7 +41,7 @@ public class ABCDBackpropagationModular
     * 
     * isRandomlyInitialized should be true
     */
-   public ABCDBackpropagationModular(int numLayers, int[] numActivations, double lowerBoundForRandomWeights, 
+   public NeuralNetwork(int numLayers, int[] numActivations, double lowerBoundForRandomWeights, 
                                      double upperBoundForRandomWeights, double lambda, boolean isRandomlyInitialized)
    {
       this.numLayers = numLayers;
@@ -87,7 +87,7 @@ public class ABCDBackpropagationModular
     * the weights can be a jagged array
     * isRandomlyInitialized should be false
     */
-   public ABCDBackpropagationModular(int numLayers, int[] numActivations, double[][][] w, 
+   public NeuralNetwork(int numLayers, int[] numActivations, double[][][] w, 
                                      double lambda, boolean isRandomlyInitialized)
    {
       this.numLayers = numLayers;
@@ -116,7 +116,7 @@ public class ABCDBackpropagationModular
     * 
     * isRandomlyInitialized should be false
     */
-   public ABCDBackpropagationModular(int numLayers, int[] numActivations, double[][][] w, 
+   public NeuralNetwork(int numLayers, int[] numActivations, double[][][] w, 
                                      boolean isRandomlyInitialized)
    {
       this.numLayers = numLayers;
@@ -483,7 +483,7 @@ public class ABCDBackpropagationModular
     */
    public static void runOrTrainFromFile(String inputFileName) throws Exception
    {
-      ABCDBackpropagationModular perceptron;
+      NeuralNetwork perceptron;
       
       printFileToConsole("input/" + inputFileName);
       
@@ -515,14 +515,14 @@ public class ABCDBackpropagationModular
          {
             double lowerBoundForRandomWeights = Double.parseDouble(extractLast(fileReader.readLine()));
             double upperBoundForRandomWeights = Double.parseDouble(extractLast(fileReader.readLine()));
-            perceptron = new ABCDBackpropagationModular(numLayers, numActivations, lowerBoundForRandomWeights, 
+            perceptron = new NeuralNetwork(numLayers, numActivations, lowerBoundForRandomWeights, 
                                                         upperBoundForRandomWeights, lambda,
                                                         isRandomlyInitialized);
          }
          else
          {
             String fileNameWeights = extractLast(fileReader.readLine());
-            perceptron = new ABCDBackpropagationModular(numLayers, numActivations, 
+            perceptron = new NeuralNetwork(numLayers, numActivations, 
                                                         readWeightsFromFile(fileNameWeights, numLayers, numActivations),
                                                         lambda, isRandomlyInitialized);
             
@@ -586,7 +586,7 @@ public class ABCDBackpropagationModular
          
          fileReader.close();
          
-         perceptron = new ABCDBackpropagationModular(numLayers, numActivations, w,
+         perceptron = new NeuralNetwork(numLayers, numActivations, w,
                                                      isRandomlyInitialized);
          
          perceptron.runAndWriteToFile(inputs, outputFileName, fileNameWeights);

@@ -1,0 +1,36 @@
+Training
+Time took = 0.000068125 seconds
+fileNameFinalWeights = weights_outputOfTrainXORWith5AndGoodStartingWeights.txt
+lambda = 0.1
+
+Total error, 9.999833117486426E-4 , less than 0.001
+Took 1 steps
+Maximum iterations = 1000000
+
+Input test case 0
+0.0 0.0 
+Outputs
+5.438998425694463E-5 0.013772053819926754 0.01655154291181241 
+True value (T)
+0.0 0.0 0.0 
+
+Input test case 1
+0.0 1.0 
+Outputs
+0.010248753847382252 0.9905502151898651 0.9840104078284747 
+True value (T)
+0.0 1.0 1.0 
+
+Input test case 2
+1.0 0.0 
+Outputs
+0.00997120112010222 0.9899066694912032 0.9842926634343339 
+True value (T)
+0.0 1.0 1.0 
+
+Input test case 3
+1.0 1.0 
+Outputs
+0.9842624633436043 0.9997769778753129 0.019763546909617045 
+True value (T)
+1.0 1.0 0.0 

@@ -1,0 +1,12 @@
+Num layers = 3
+Num activations in layer 0 = 2
+Num activations in layer 1 = 5
+Num activations in layer 2 = 3
+
+isRandomlyInitialized = false
+fileNameWeights = weights_outputOfTrainXORWith5AndGoodStartingWeights.txt
+
+Input
+1.0 1.0 
+Outputs
+0.9842624633436043 0.9997769778753129 0.019763546909617045 

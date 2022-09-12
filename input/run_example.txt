@@ -1,0 +1,11 @@
+Running
+Num layers = 3
+Num activations in layer 0 = 2
+Num activations in layer 1 = 5
+Num activations in layer 2 = 3
+
+outputFileName = output_run_example.txt
+fileNameWeights = weights_outputOfTrainXORWith5AndGoodStartingWeights.txt
+
+Input
+1.0 1.0 
